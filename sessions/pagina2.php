@@ -1,6 +1,14 @@
 <?php 
 session_start();
 
+if ($_SESSION) {
+	$nombre = $_SESSION['nombre'];
+	echo "<h1>Hola, $nombre</h1>";
+} else {
+	echo "No has iniciado sesion";
+
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -11,7 +19,6 @@ session_start();
 	<title>Pagina 2</title>
 </head>
 <body>
-	<h1>Hola, <?php echo $_SESSION['nombre']; ?></h1>
 	<a href="cerrar.php">Cerrar Sesion</a>
 </body>
 </html>
