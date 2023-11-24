@@ -11,13 +11,12 @@
 </head>
 <body>
 	<div class="contenedor">
-		<h1>Articulos</h1>
+		<h1>Artículos</h1>
 		<section class="articulos">
 			<ul>
-				<li>1.- Lorem, ipsum dolor sit amet consectetur adipisicing.</li>
-				<li>1.- Lorem, ipsum dolor sit amet consectetur adipisicing.</li>
-				<li>1.- Lorem, ipsum dolor sit amet consectetur adipisicing.</li>
-				<li>1.- Lorem, ipsum dolor sit amet consectetur adipisicing.</li>	
+				<?php foreach ($articulos as $articulo): ?>
+					<li><?php echo $articulo['id'] . '.- ' . $articulo['articulo'] ?></li>					
+				<?php endforeach ?>
 			</ul>
 		</section>
 
